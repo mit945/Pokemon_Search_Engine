@@ -8,4 +8,4 @@ user stories:
 ##user is able to have their own fav collections(thru drag/click) of pokemon<br/>
 ##user is able remove their fav pokemon from collections<br/>
 ##User is able to inspect the img of the pokemon for abilities with *tooltip<br/>
-##user is able to upgrade and see the evoluton of pokemon while giving the object berries.<br/>
+##user is able to enter their trainer name.<br/>
