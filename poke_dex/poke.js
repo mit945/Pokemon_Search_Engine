@@ -4,25 +4,30 @@ const baseURL = `https://pokeapi.co/api/v2/`
 const endPoint = `pokemon`
 let pokemonName;
  
-console.log(queryURL)
+
 
 ///loop thru pokemon and give//
-for(let i = 0 ; i < 964 ;i++){
-	let queryURL = baseURL + endPoint + '/' + ${`i`} + '/' 
-}
+
+		
+
 
 
 
 $(() => {
+	for(let i = 0 ; i < 20 ;i++){
 	$.ajax({
-		url : baseURL + endPoint
-	}).then((pokemonData) => {
+		url : baseURL + endPoint + '/' + i + '/'
+	// console.log(queryURL)
 
+	}).then((pokemonData) => {
+		console.log(pokemonData)
 		
 	})
-
+}
 	const pokemonData = $.ajax({
-		url: queryURL + endPoint 
+		url: queryURL + pokemonName
+		//pokemonName is the name of the pokemon the user is 
+		//searching for 
 	})
 
 
