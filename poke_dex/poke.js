@@ -11,7 +11,7 @@ let pokemonName = "";
 ///loop thru pokemon and give//
 // const 
 
-const queryURL = baseURL + endPoint + '/' + pokemonName + '/'
+const queryURL = baseURL + endPoint + '/' + pokemonName 
 
 $(() => {
 	const pokemonData = $.ajax({
@@ -28,6 +28,7 @@ const getPokemon = () => {
 
 	}).then((pokemonData) => {
 		console.log(pokemonData)
+	
 		// $.getJSON(Url, function(data,status){
 		// 	console.
 		// })

@@ -11,3 +11,4 @@ user stories:
 ##user is able to enter their trainer name.<br/>
 
 
+<img src= "prototype_pokemonWiki.png"
