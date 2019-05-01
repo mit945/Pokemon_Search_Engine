@@ -19,6 +19,7 @@ $(() => {
 		//pokemonName is the name of the pokemon the user is 
 		//searching for 
 	})
+	
 const getPokemon = () => {
 	for(let i = 0 ; i < 20 ;i++){
 	$.ajax({
@@ -28,7 +29,7 @@ const getPokemon = () => {
 
 	}).then((pokemonData) => {
 		console.log(pokemonData)
-	
+
 		// $.getJSON(Url, function(data,status){
 		// 	console.
 		// })
