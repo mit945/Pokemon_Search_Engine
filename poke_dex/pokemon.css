@@ -2,13 +2,13 @@ body{
 	display:flex;
 	flex-wrap: nowrap;
 	justify-content: space-around;
-	background-color: gray;
+	background-color: #e6ffff;
 	
 }
 
 .container{
 	
-	background-color: yellow;
+	background-color: #99ccff;
 	width: 400px;
 	height: 600px;
 	/*margin:auto;*/
