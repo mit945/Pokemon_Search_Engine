@@ -1,0 +1,13 @@
+body{
+	background-color: gray;
+	
+}
+
+.container{
+	display:inline-block;
+	background-color: yellow;
+	width: 50%;
+	height: 600px;
+	margin:auto;
+
+}
