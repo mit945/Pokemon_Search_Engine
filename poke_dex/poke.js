@@ -3,44 +3,59 @@ console.log('hi')
 const baseURL = `https://pokeapi.co/api/v2/`
 
 const endPoint1 = `pokemon`;//name
-// const endPoint2 = `pokemon-form`
+
 
 let pokemonName = "";
 
 // const limit = `limit=1`
 
-const queryURL = baseURL + endPoint1 + '/' + pokemonName 
-
+const nameURL = baseURL + endPoint1 + '/' + pokemonName 
+const formURL = baseURL + 'pokemon-form' + pokemonName;//getpokemonForm()
 $(() => {
 
 //////////////////get pokemon names/////////////
 	const pokemonData = $.ajax({
-		url: queryURL + pokemonName, 
+		url: nameURL + pokemonName, 
 		
 	})
 
 const getPokemon = () => {
 	
 	$.ajax({
-		url : queryURL + pokemonName,
+		url : nameURL + pokemonName,
 		dataType : 'json',
 		method: 'GET'
 	
 
 	}).then((pokemonData) => {
-		var form = pokemonData.forms[0]//img of the pokemon
+		var form = pokemonData.forms[0]//img src of the pokemon
 		console.log(form)
 		$('.container1').append(form.name)
 		
 	}),(error) => {
 		console.log(error)
-		console.log(queryURL)
+		console.log(nameURL)
 
 		}
 
 	
 }
 
+//////////form///////////////////////
+const getpokemonForm = () => {
+	$.ajax({
+		url : formURL,
+		dataType : 'json',
+		method: 'GET'
+	 
+	}).then((pokemondata) => {
+		// console.log(pokemondata.forms[0].url)
+	}),(error) => {
+
+		console.log(error)
+	}
+
+}
 
 $('form').on('submit' , (event) => {
 	event.preventDefault()
@@ -48,78 +63,17 @@ $('form').on('submit' , (event) => {
 	console.log(pokemonName)
 
 /////////////////////////////////////////
-//////////////get pokemon name below here//////////////////////
+//////////////get pokemon calls below here//////////////////////
 
 	getPokemon()
-
+	// getpokemonForm()
 	
 	})
 
 });
 
 
+///objective:
 
-// let pokemonTypes = "" ;//yseless
-// 	/////////////pokemon types.////////////////////
-
-// var types = $('input[type=text]').val().replace(' ','');
-//  types = types.split(',');
-//  console.log(types)
-
-//  var trainerType = types.map(function(type){
- 	
-//  	return $.ajax({
-//  		url: 'http://pokeapi.co/api/v2/type/' + type,
-//  		dataType:'json',
-//  		method: 'GET'
-
-//  	})
-//  });
-
-
-//  	$.when.apply(null,trainerType).then(function(){
-//  		console.log(arguments)
-//  		var pokemonTypes = Array.prototype.slice.call(arguments)//into array's from input
-
-
-//  		getDoubleDmg(pokemonTypes)
-
-//  	})
-
-//  });
-
-//  const getDoubleDmg = (pokemonTypes) =>{
-// 		pokemonTypes = pokemonTypes.map((types) => {
-// 			return types[0].damage_relations.double_damage_from;
-// 		});
-// 		 	pokemonTypes = flatten(pokemonTypes);
-
-// 		var damageType = pokemonTypes.map((type) => {
-// 			return $.ajax({
-// 				url: type.url,
-// 				dataType: 'json',
-// 				method:'GET'
-// 			})
-// 	})
-// 		$.when.apply(null,damageType).then(() => {
-// 			var pokemon = Array.prototype.slice.call(arguments);
-// 			buildTeam(pokemon);
-// 		})
-
-// 		console.log(damageType);//array
-// }
-
-// 	const buildTeam = (pokemon) => {
-// 		pokemon = pokemon.map(function(poke){
-// 				return poke[0].pokemon;
-// 		})
-// 		console.log(pokemon)
-// }
-
-// const flatten = (arrayToFlatten) => {
-// 	return arrayToFlatten.reduce((a,b) => {
-// 		return a.concat(b)
-// 	},[])
-// }
-// // console.log(trainerType)
-
+// get the getpokemonform() to work 
+//grab the img src and display it on the left side of the screen;
