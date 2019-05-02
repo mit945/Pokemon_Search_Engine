@@ -11,5 +11,9 @@ user stories:
 ##user is able to enter their trainer name.<br/>
 
 
-<img src= "prototype_pokemonWiki.png" alt = 'prototype_pokemonWiki picure'/>
+<!-- <img src= "prototype_pokemonWiki.png" alt = 'prototype_pokemonWiki picure'/> -->
+
+github pages: <link href: "https://mit945.github.io/project-1/"></link> 
+
+
 
