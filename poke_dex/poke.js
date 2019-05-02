@@ -2,15 +2,16 @@ console.log('hi')
 
 const baseURL = `https://pokeapi.co/api/v2/`
 
-const endPoint1 = `pokemon`;//name
+const endPoint1 = `pokemon`;//get the pokemon by /pokemon/ in api
 
 
 let pokemonName = "";
 
-// const limit = `limit=1`
+
 
 const nameURL = baseURL + endPoint1 + '/' + pokemonName 
-const formURL = `https://pokeapi.co/api/v2/pokemon-form/`//getpokemonForm()
+
+const pokemonFormURL = `https://pokeapi.co/api/v2/pokemon-form/` + pokemonName + '/'
 $(() => {
 
 //////////////////get pokemon names/////////////
@@ -30,6 +31,7 @@ const getPokemon = () => {
 	}).then((pokemonData) => {
 		var form = pokemonData.forms[0]//img src of the pokemon
 		// console.log(form)
+		// console.log(form.name)
 		$('.container1').append(form.name)
 		
 	}),(error) => {
@@ -42,16 +44,20 @@ const getPokemon = () => {
 }
 
 //////////form///////////////////////
-const getpokemonForm = () => {
+const getPokemonForm = () => {
 	$.ajax({
 		url : nameURL + pokemonName,
 		dataType : 'json',
 		method: 'GET'
 	 
 	}).then((pokemondata) => {
-		const pokemonFormURL = formURL + pokemonName + '/'
-		console.log(pokemonFormURL)
 		
+	var pokemonFormURL = pokemondata.forms[0].url
+		console.log(pokemonFormURL)
+		// $('#container1').append('hi')
+
+	var img = $('img').attr('src' , 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png')
+		$('#container1').append(img)
 	}),(error) => {
 
 		console.log(error)
@@ -62,13 +68,13 @@ const getpokemonForm = () => {
 $('form').on('submit' , (event) => {
 	event.preventDefault()
 	pokemonName = $('input[type="text"]').val()
-	console.log(pokemonName)
+	// console.log(pokemonName)
 
 /////////////////////////////////////////
 //////////////get pokemon calls below here//////////////////////
 
 	getPokemon()
-	getpokemonForm()
+	getPokemonForm()
 	
 	})
 
@@ -77,5 +83,5 @@ $('form').on('submit' , (event) => {
 
 ///objective:
 
-// get the getpokemonform() to work 
+// get the getPokemonForm() to work 
 //grab the img src and display it on the left side of the screen;
