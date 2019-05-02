@@ -15,11 +15,21 @@ const pokemonFormURL = `https://pokeapi.co/api/v2/pokemon-form/` + pokemonName +
 $(() => {
 
 //////////////////get pokemon names/////////////
-	const pokemonData = $.ajax({
+const pokemonData = $.ajax({
 		url: nameURL + pokemonName, 
 		
 	})
+// const refreshButton = () => {
+// 	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','red')
+// 	$('.container1').append($refresh)
 
+// 	$('.refreshBtn').on('click', () => {
+// 		console.log('hi')
+// 		// $('p').reomve()
+// 	})
+
+
+// }
 const getPokemon = () => {
 	
 	$.ajax({
@@ -33,7 +43,9 @@ const getPokemon = () => {
 		// console.log(form)
 		// console.log(form.name)
 		$('.container1').append(form.name)
-		
+		// $('.container1').html(`
+		// 	<p>${form.name}</p>
+		// 	`)
 	}),(error) => {
 		console.log(error)
 		console.log(nameURL)
@@ -56,7 +68,7 @@ const getPokemonForm = () => {
 		console.log(pokemonFormURL)
 		// $('#container1').append('hi')
 
-	var img = $('img').attr('src' , 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png')
+	var img = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
 		$('#container1').append(img)
 	}),(error) => {
 
@@ -64,8 +76,11 @@ const getPokemonForm = () => {
 	}
 
 }
+	const abilities =() => {
 
-$('form').on('submit' , (event) => {
+
+	} 
+	$('form').on('submit' , (event) => {
 	event.preventDefault()
 	pokemonName = $('input[type="text"]').val()
 	// console.log(pokemonName)
@@ -77,11 +92,16 @@ $('form').on('submit' , (event) => {
 	getPokemonForm()
 	
 	})
-
+	// refreshButton()
 });
 
 
 ///objective:
 
-// get the getPokemonForm() to work 
-//grab the img src and display it on the left side of the screen;
+// get the pokemonImg() to append each pokemon's img 
+//grab the img src and display it in .container1;
+//get the refresh button to work
+//tooltips
+//get carasuel and plus minus btton to work 
+// enter trainer name
+
