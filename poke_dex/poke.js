@@ -10,7 +10,7 @@ let pokemonName = "";
 // const limit = `limit=1`
 
 const nameURL = baseURL + endPoint1 + '/' + pokemonName 
-const formURL = baseURL + 'pokemon-form' + pokemonName;//getpokemonForm()
+const formURL = `https://pokeapi.co/api/v2/pokemon-form/`//getpokemonForm()
 $(() => {
 
 //////////////////get pokemon names/////////////
@@ -44,12 +44,13 @@ const getPokemon = () => {
 //////////form///////////////////////
 const getpokemonForm = () => {
 	$.ajax({
-		url : formURL,
+		url : nameURL + pokemonName,
 		dataType : 'json',
 		method: 'GET'
 	 
 	}).then((pokemondata) => {
-		// console.log(pokemondata.forms[0].url)
+		console.log(pokemondata.forms[0].url)
+		
 	}),(error) => {
 
 		console.log(error)
@@ -66,7 +67,7 @@ $('form').on('submit' , (event) => {
 //////////////get pokemon calls below here//////////////////////
 
 	getPokemon()
-	// getpokemonForm()
+	getpokemonForm()
 	
 	})
 
