@@ -6,9 +6,18 @@ body{
 	
 }
 
-.container{
+.container1{
 	
 	background-color: #99ccff;
+	width: 400px;
+	height: 600px;
+	/*margin:auto;*/
+
+}
+
+.container2{
+	
+	background-color: yellow;
 	width: 400px;
 	height: 600px;
 	/*margin:auto;*/
