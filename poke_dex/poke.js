@@ -51,12 +51,12 @@ const getPokemonForm = () => {
 		method: 'GET'
 	 
 	}).then((pokemondata) => {
-		
+		console.log(pokemondata)
 	var pokemonFormURL = pokemondata.forms[0].url
 		console.log(pokemonFormURL)
 		// $('#container1').append('hi')
 
-	var img = $('img').attr('src' , 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png')
+	var img = $('img').attr('src' , 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png')
 		$('#container1').append(img)
 	}),(error) => {
 
