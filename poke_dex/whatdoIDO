@@ -28,9 +28,9 @@ what did i do?
 
  what's the blocker?
 
- 
 
-// let pokemonTypes = "" ;//yseless
+
+// let pokemonTypes = "" ;//useless
 // 	/////////////pokemon types.////////////////////
 
 // var types = $('input[type=text]').val().replace(' ','');

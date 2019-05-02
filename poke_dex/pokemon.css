@@ -5,7 +5,13 @@ body{
 	background-color: #e6ffff;
 	
 }
-
+h1{
+	/*display: block;*/
+	/*display:flex;*/
+	width:160px;
+	height: 25px;
+	color: brown;
+}
 .container1{
 	
 	background-color: #99ccff;
