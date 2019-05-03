@@ -47,13 +47,15 @@ const descriptionOfPokemon = () => {
 
 	}).then((pokemonData) => {
 		console.log(pokemonData.abilities[0].ability.name)
+		var form = pokemonData.forms[0]
 		// console.log(pokemonData.abilities[1].name)
 		// $('.tooltips').append(pokemonData.abilities[0].ability.name)
 		// $('.tooltips').append(pokemonData.abilities[1].ability.name)
 		$('.tooltips').html(`
+			<h4>${form.name}</h4>
 			<h4>ability names: </h4>
-			<h5>${pokemonData.abilities[0].ability.name}</h5>
-			<p>${pokemonData.abilities[1].ability.name}</p>
+			<p>1.${pokemonData.abilities[0].ability.name}<p>
+			<p>2.${pokemonData.abilities[1].ability.name}</p>
 			`)
 	}),(error) => {
 		console.log(error)
@@ -79,9 +81,9 @@ const getPokemon = () => {
 	
 
 	}).then((pokemonData) => {
-		var form = pokemonData.forms[0]//img src of the pokemon
+		// var form = pokemonData.forms[0]//img src of the pokemon
 		// console.log(form)
-		console.log(form.name)
+		// console.log(form.name)
 		// $('.tooltips').append(form.name)
 	
 	}),(error) => {

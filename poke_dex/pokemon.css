@@ -29,7 +29,12 @@ img{
 	/*margin:auto;*/
 
 }
+h4{
+	color:red;
+	font-weight: 500;
+	font-family: "Courier New",monospace;
 
+}
 .tooltips{
 	width: 300px;
 	height: 150px;
