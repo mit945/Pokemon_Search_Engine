@@ -7,13 +7,10 @@ body{
 	
 }
 h1{
-	/*display: block;*/
-	/*display:flex;*/
-	/*width:160px;
-	height: 25px;*/
-	color: brown;
+
+	color: green;
 }
-.container1{
+.inputBox1{
 	
 	background-color: #99ccff;
 	width: 400px;
@@ -24,7 +21,7 @@ h1{
 img{
 	
 }
-.container2{
+.inputBox2{
 	
 	background-color: yellow;
 	width: 400px;

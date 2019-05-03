@@ -18,49 +18,57 @@ const pokemonData = $.ajax({
 		url: nameURL + pokemonName, 
 		
 	})
+///////refresh btn////////////////
 const refreshButton = () => {
 	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
-	$('.container1').append($refresh)
+	$('.inputBox1').append($refresh)
 
 	$('.refreshBtn').on('click', () => {
 		console.log('hi')
-		// $('p').reomve()
+
 	})
 
 
 }
+refreshButton()
 //////////description of pokemon///////
-const $div = $('<div>').addClass('tooltips').css('background-color','gray')
+const $div = $('<div>').addClass('tooltips').css('background-color','#bfff80')
 
 const descriptionOfPokemon = () => {
 	
-	$('.container1').append($div)
-	// function abilities(){
-	// 	return 	$.ajax({
-	// 	url : nameURL + pokemonName,
-	// 	dataType : 'json',
-	// 	method: 'GET'
+	$('.inputBox1').append($div)
+
+	function getAbilities(){
+		return 	$.ajax({
+		url : nameURL + pokemonName,
+		dataType : 'json',
+		method: 'GET'
 	
 
-	// }).then((pokemonData) => {
-	// 	var form = pokemonData.forms[0]//img src of the pokemon
-	// 	// console.log(form)
-	// 	// console.log(form.name)
-	// 	$('.container1').append(form.name)
-	
-	// }),(error) => {
-	// 	console.log(error)
-	// 	console.log(nameURL)
+	}).then((pokemonData) => {
+		console.log(pokemonData.abilities[0].ability.name)
+		// console.log(pokemonData.abilities[1].name)
+		// $('.tooltips').append(pokemonData.abilities[0].ability.name)
+		// $('.tooltips').append(pokemonData.abilities[1].ability.name)
+		$('.tooltips').html(`
+			<h4>ability names: </h4>
+			<h5>${pokemonData.abilities[0].ability.name}</h5>
+			<p>${pokemonData.abilities[1].ability.name}</p>
+			`)
+	}),(error) => {
+		console.log(error)
+		console.log(nameURL)
 
-	// 	}
+		}
 
 
-	// }
+	}
+	getAbilities()
 
 }
 	
 /////////////////////////////////
-///////////////////////////////////
+///////////////get pokemon form api and log to console////////////////////
 
 const getPokemon = () => {
 	
@@ -99,7 +107,7 @@ const getPokemonForm = () => {
 		// console.log()
 
 	var img = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
-		$('#container1').append(img)
+		$('#inputBox1').append(img)
 		///////append img///////
 
 
@@ -112,7 +120,7 @@ const getPokemonForm = () => {
 }
 
 
-	$('.container2').on('submit',(event) => {
+	$('.inputBox2').on('submit',(event) => {
 		// event.preventDefault()
 	const nameUser = $('input[type="text"]').val()
 
@@ -120,7 +128,7 @@ const getPokemonForm = () => {
 		console.log(nameUser)
 	})
 
-	$('.container1').on('submit' , (event) => {
+	$('.inputBox1').on('submit' , (event) => {
 	
 	pokemonName = $('input[type="text"]').val()
 	// console.log(pokemonName)
@@ -139,7 +147,7 @@ const getPokemonForm = () => {
 		descriptionOfPokemon()
 	})
 
-	refreshButton()
+	
 });
 
 
