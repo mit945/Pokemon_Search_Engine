@@ -30,7 +30,8 @@ const pokemonData = $.ajax({
 
 // }
 const descriptionOfPokemon = (abilities) => {
-
+	const $div = $('<div>')
+	abilities 
 }
 const getPokemon = () => {
 	
@@ -72,7 +73,9 @@ const getPokemonForm = () => {
 
 	var img = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
 		$('#container1').append(img)
-	
+
+
+	descriptionOfPokemon(abilities)
 	}),(error) => {
 
 		console.log(error)
