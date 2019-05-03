@@ -19,7 +19,7 @@ const pokemonData = $.ajax({
 		
 	})
 const refreshButton = () => {
-	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','red')
+	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
 	$('.container1').append($refresh)
 
 	$('.refreshBtn').on('click', () => {
@@ -31,6 +31,7 @@ const refreshButton = () => {
 }
 //////////description of pokemon///////
 const $div = $('<div>').addClass('tooltips').css('background-color','gray')
+
 const descriptionOfPokemon = () => {
 	
 	$('.container1').append($div)
@@ -72,8 +73,8 @@ const getPokemon = () => {
 	}).then((pokemonData) => {
 		var form = pokemonData.forms[0]//img src of the pokemon
 		// console.log(form)
-		// console.log(form.name)
-		$('.tooltips').append(form.name)
+		console.log(form.name)
+		// $('.tooltips').append(form.name)
 	
 	}),(error) => {
 		console.log(error)
@@ -94,11 +95,12 @@ const getPokemonForm = () => {
 	}).then((pokemondata) => {
 		console.log(pokemondata)
 	var pokemonFormURL = pokemondata.forms[0].url
-		console.log(pokemonFormURL)
-		// $('#container1').append('hi')
+		// console.log(pokemonFormURL)
+		// console.log()
 
 	var img = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
 		$('#container1').append(img)
+		///////append img///////
 
 
 
@@ -109,7 +111,16 @@ const getPokemonForm = () => {
 
 }
 
-	$('form').on('submit' , (event) => {
+
+	$('form2').on('submit',(event) => {
+		// event.preventDefault()
+	const nameUser =  $('input[type="text"]').val()
+
+		// $('.container2').append(nameUser)
+		console.log(nameUser)
+	})
+
+	$('.container1').on('submit' , (event) => {
 	event.preventDefault()
 	pokemonName = $('input[type="text"]').val()
 	// console.log(pokemonName)
@@ -122,6 +133,8 @@ const getPokemonForm = () => {
 	
 	})
 	refreshButton()
+
+
 
 	$('img').on('mouseenter',(event) => {
 
