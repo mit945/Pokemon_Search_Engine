@@ -8,7 +8,6 @@ const endPoint1 = `pokemon`;//get the pokemon by /pokemon/ in api
 let pokemonName = "";
 
 
-
 const nameURL = baseURL + endPoint1 + '/' + pokemonName 
 
 const pokemonFormURL = `https://pokeapi.co/api/v2/pokemon-form/` + pokemonName + '/'
@@ -30,6 +29,9 @@ const pokemonData = $.ajax({
 
 
 // }
+const descriptionOfPokemon = (abilities) => {
+
+}
 const getPokemon = () => {
 	
 	$.ajax({
@@ -70,16 +72,14 @@ const getPokemonForm = () => {
 
 	var img = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
 		$('#container1').append(img)
+	
 	}),(error) => {
 
 		console.log(error)
 	}
 
 }
-	const abilities =() => {
 
-
-	} 
 	$('form').on('submit' , (event) => {
 	event.preventDefault()
 	pokemonName = $('input[type="text"]').val()
@@ -98,10 +98,9 @@ const getPokemonForm = () => {
 
 ///objective:
 
-// get the pokemonImg() to append each pokemon's img 
-//grab the img src and display it in .container1;
+//expand the img to fit the container
 //get the refresh button to work
-//tooltips
+//tooltips with another div with pokemon description
 //get carasuel and plus minus btton to work 
 // enter trainer name
 
