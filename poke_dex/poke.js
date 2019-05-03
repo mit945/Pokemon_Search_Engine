@@ -112,16 +112,16 @@ const getPokemonForm = () => {
 }
 
 
-	$('form2').on('submit',(event) => {
+	$('.container2').on('submit',(event) => {
 		// event.preventDefault()
-	const nameUser =  $('input[type="text"]').val()
+	const nameUser = $('input[type="text"]').val()
 
 		// $('.container2').append(nameUser)
 		console.log(nameUser)
 	})
 
 	$('.container1').on('submit' , (event) => {
-	event.preventDefault()
+	
 	pokemonName = $('input[type="text"]').val()
 	// console.log(pokemonName)
 
@@ -130,16 +130,16 @@ const getPokemonForm = () => {
 
 	getPokemon()
 	getPokemonForm()
-	
+	event.preventDefault()
 	})
-	refreshButton()
-
 
 
 	$('img').on('mouseenter',(event) => {
 
 		descriptionOfPokemon()
 	})
+
+	refreshButton()
 });
 
 
