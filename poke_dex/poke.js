@@ -122,13 +122,13 @@ const getPokemonForm = () => {
 }
 
 
-	$('.inputBox2').on('submit',(event) => {
-		// event.preventDefault()
-	const nameUser = $('input[type="text"]').val()
+	// $('.inputBox2').on('submit',(event) => {
+	// 	// event.preventDefault()
+	// const nameUser = $('input[type="text"]').val()
 
-		// $('.container2').append(nameUser)
-		console.log(nameUser)
-	})
+	// 	// $('.container2').append(nameUser)
+	// 	console.log(nameUser)
+	// })
 
 	$('.inputBox1').on('submit' , (event) => {
 	
@@ -148,7 +148,7 @@ const getPokemonForm = () => {
 
 		descriptionOfPokemon()
 	})
-
+	$('img').draggable()
 	
 });
 
