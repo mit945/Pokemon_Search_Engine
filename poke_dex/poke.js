@@ -42,7 +42,7 @@ const getPokemon = () => {
 		var form = pokemonData.forms[0]//img src of the pokemon
 		// console.log(form)
 		// console.log(form.name)
-		$('.container1').append(form.name)
+		// $('.container1').append(form.name)
 		// $('.container1').html(`
 		// 	<p>${form.name}</p>
 		// 	`)
