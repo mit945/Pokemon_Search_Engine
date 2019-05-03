@@ -18,21 +18,28 @@ const pokemonData = $.ajax({
 		url: nameURL + pokemonName, 
 		
 	})
-// const refreshButton = () => {
-// 	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','red')
-// 	$('.container1').append($refresh)
+const refreshButton = () => {
+	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','red')
+	$('.container1').append($refresh)
 
-// 	$('.refreshBtn').on('click', () => {
-// 		console.log('hi')
-// 		// $('p').reomve()
-// 	})
+	$('.refreshBtn').on('click', () => {
+		console.log('hi')
+		// $('p').reomve()
+	})
 
 
-// }
-const descriptionOfPokemon = (abilities) => {
-	const $div = $('<div>')
-	abilities 
 }
+//////////description of pokemon///////
+const $div = $('<div>').addClass('tooltips').css('background-color','gray')
+const descriptionOfPokemon = () => {
+	
+	$('.container1').append($div)
+
+}
+	
+/////////////////////////////////
+///////////////////////////////////
+
 const getPokemon = () => {
 	
 	$.ajax({
@@ -75,7 +82,7 @@ const getPokemonForm = () => {
 		$('#container1').append(img)
 
 
-	descriptionOfPokemon(abilities)
+
 	}),(error) => {
 
 		console.log(error)
@@ -95,7 +102,12 @@ const getPokemonForm = () => {
 	getPokemonForm()
 	
 	})
-	// refreshButton()
+	refreshButton()
+
+	$('img').on('mouseenter',(event) => {
+
+		descriptionOfPokemon(event.target)
+	})
 });
 
 
