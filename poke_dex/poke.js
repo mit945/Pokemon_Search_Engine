@@ -34,6 +34,27 @@ const $div = $('<div>').addClass('tooltips').css('background-color','gray')
 const descriptionOfPokemon = () => {
 	
 	$('.container1').append($div)
+	// function abilities(){
+	// 	return 	$.ajax({
+	// 	url : nameURL + pokemonName,
+	// 	dataType : 'json',
+	// 	method: 'GET'
+	
+
+	// }).then((pokemonData) => {
+	// 	var form = pokemonData.forms[0]//img src of the pokemon
+	// 	// console.log(form)
+	// 	// console.log(form.name)
+	// 	$('.container1').append(form.name)
+	
+	// }),(error) => {
+	// 	console.log(error)
+	// 	console.log(nameURL)
+
+	// 	}
+
+
+	// }
 
 }
 	
@@ -52,10 +73,8 @@ const getPokemon = () => {
 		var form = pokemonData.forms[0]//img src of the pokemon
 		// console.log(form)
 		// console.log(form.name)
-		// $('.container1').append(form.name)
-		// $('.container1').html(`
-		// 	<p>${form.name}</p>
-		// 	`)
+		$('.tooltips').append(form.name)
+	
 	}),(error) => {
 		console.log(error)
 		console.log(nameURL)
@@ -65,7 +84,7 @@ const getPokemon = () => {
 	
 }
 
-//////////form///////////////////////
+//////////get the picture of pokemon///////////////////////
 const getPokemonForm = () => {
 	$.ajax({
 		url : nameURL + pokemonName,
@@ -106,7 +125,7 @@ const getPokemonForm = () => {
 
 	$('img').on('mouseenter',(event) => {
 
-		descriptionOfPokemon(event.target)
+		descriptionOfPokemon()
 	})
 });
 
