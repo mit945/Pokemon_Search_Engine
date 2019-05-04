@@ -19,7 +19,9 @@ h1{
 
 }
 img{
-	
+	width: 250px;
+	height: 250px;
+	object-position: center;
 }
 .inputBox2{
 	
@@ -28,6 +30,11 @@ img{
 	height: 600px;
 	/*margin:auto;*/
 
+}
+p{
+	color:orange;
+	font-family: sans-serif;
+	text-decoration: underline;
 }
 h4{
 	color:red;
