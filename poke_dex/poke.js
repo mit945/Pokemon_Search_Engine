@@ -143,12 +143,12 @@ const getPokemonForm = () => {
 	$('img').draggable({
 		// helper:'clone'
 	})
-	$('inputBox2').droppable({
-		drop: function(event,ui){
-			$('.inputBox2').append(ui.draggable)
-		}
+	// $('inputBox2').droppable({
+	// 	drop: function(event,ui){
+	// 		$('.inputBox2').append(ui.draggable)
+	// 	}
 
-	})
+	// })
 
 		///////refresh btn////////////////
 
