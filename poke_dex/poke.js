@@ -125,13 +125,14 @@ const getPokemonForm = () => {
 
 /////////////////errors//////////////////////
 
-	// $('.inputBox2').on('submit',(event) => {
-	// 	// event.preventDefault()
-	// const nameUser = $('input[type="text"]').val()
+	$('.inputBox2').on('submit1',(event) => {
+		
+	const nameUser = $('input[type="text"]').val()
 
-	// 	// $('.container2').append(nameUser)
-	// 	console.log(nameUser)
-	// })
+		// $('.container2').append(nameUser)
+		console.log(typeof nameUser)
+		event.preventDefault()
+	})
 ///////////////////////////////////////////
 	$('.inputBox1').on('submit' , (event) => {
 	
@@ -152,8 +153,24 @@ const getPokemonForm = () => {
 		descriptionOfPokemon()
 	})
 	$('img').draggable({
-		helper:'clone'
+		// helper:'clone'
 	})
+	// $('inputBox2').droppable({
+	// 	drop: function(event,ui){
+	// 		var id = $(ui.draggable).attr('id');
+	// 		var toy = $(ui.draggable).attr('html');
+	// 		var box = $(this).attr('id');
+	// 	}
+	// 	$.ajax({
+	// 		url:'jquery.ui.touch-punch.min.js',
+	// 		type:'GET',
+	// 		data:{
+	// 			'id':id,
+	// 			'box':box
+	// 		}
+
+	// 	})
+	// })
 
 });
 
