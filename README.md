@@ -14,7 +14,7 @@ user stories:
 <!-- <img src= "prototype_pokemonWiki.png" alt = 'prototype_pokemonWiki picure'/> -->
 
 github pages:https://mit945.github.io/project-1/poke_dex/
-
+github pages:https://mit945.github.io/project-1/
 ```````````````````````````````
 *addtional requirements
 	-user able to have a smooth experience on the mobile phone
