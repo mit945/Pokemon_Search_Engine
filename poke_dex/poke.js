@@ -56,21 +56,7 @@ const descriptionOfPokemon = () => {
 	getAbilities()
 
 }
-	///////refresh btn////////////////
 
-	const refreshButton = () => {
-	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
-	$('.inputBox1').append($refresh)
-
-	$('.refreshBtn').on('click', () => {
-		console.log('hi')
-		let pokemonImg = $image;
-		// $('.container1').remove('.ui-draggable')
-	})
-
-
-}
-refreshButton()
 /////////////////////////////////
 ///////////////get pokemon form api and log to console////////////////////
 
@@ -125,18 +111,20 @@ const getPokemonForm = () => {
 
 /////////////////errors//////////////////////
 
-	$('.inputBox2').on('submit1',(event) => {
+	$('.inputBox2').on('submit',(event) => {
 		
-	const nameUser = $('input[type="text"]').val()
+	const nameUser = $('input[name="submit1"]').val()
 
 		// $('.container2').append(nameUser)
-		console.log(typeof nameUser)
+		alert(nameUser)
+		var  instruction = $('#inst').text('drag pokemon here for ' + nameUser + '\'s collection:')
+		$('.inputBox2').append(instruction)
 		event.preventDefault()
 	})
 ///////////////////////////////////////////
 	$('.inputBox1').on('submit' , (event) => {
 	
-	pokemonName = $('input[type="text"]').val()
+	pokemonName = $('input[type="poke"]').val()
 	// console.log(pokemonName)
 
 /////////////////////////////////////////
@@ -171,6 +159,22 @@ const getPokemonForm = () => {
 
 	// 	})
 	// })
+
+		///////refresh btn////////////////
+
+	const refreshButton = () => {
+	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
+	$('.inputBox1').append($refresh)
+
+	$('.refreshBtn').on('click', () => {
+		console.log('hi')
+		// let pokemonImg = $image;
+		$('inputBox1').empty()
+	})
+
+
+}
+refreshButton()
 
 });
 
