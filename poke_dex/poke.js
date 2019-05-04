@@ -169,9 +169,9 @@ const getPokemonForm = () => {
 	$('.refreshBtn').on('click', () => {
 		console.log('hi')
 		// let pokemonImg = $image;
-		$('.inputBox1').empty()
-		const $inputBox = $('.inputBox1')
-		$('#container1').append($inputBox)
+		// $('.inputBox1').empty()
+		const $imaging = $('img')
+		$imaging.hide()
 	})
 
 
