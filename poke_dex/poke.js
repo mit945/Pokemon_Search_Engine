@@ -18,19 +18,7 @@ const pokemonData = $.ajax({
 		url: nameURL + pokemonName, 
 		
 	})
-///////refresh btn////////////////
-const refreshButton = () => {
-	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
-	$('.inputBox1').append($refresh)
 
-	$('.refreshBtn').on('click', () => {
-		console.log('hi')
-
-	})
-
-
-}
-refreshButton()
 //////////description of pokemon///////
 const $div = $('<div>').addClass('tooltips').css('background-color','#bfff80')
 
@@ -68,7 +56,21 @@ const descriptionOfPokemon = () => {
 	getAbilities()
 
 }
-	
+	///////refresh btn////////////////
+
+	const refreshButton = () => {
+	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
+	$('.inputBox1').append($refresh)
+
+	$('.refreshBtn').on('click', () => {
+		console.log('hi')
+		let pokemonImg = $image;
+		// $('.container1').remove('.ui-draggable')
+	})
+
+
+}
+refreshButton()
 /////////////////////////////////
 ///////////////get pokemon form api and log to console////////////////////
 
@@ -108,9 +110,9 @@ const getPokemonForm = () => {
 		// console.log(pokemonFormURL)
 		// console.log()
 
-	var img = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
-		$('#inputBox1').append(img)
-		///////append img///////
+	var $image = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
+		$('#inputBox1').append($image)
+		///////append $image///////
 
 
 
@@ -121,6 +123,7 @@ const getPokemonForm = () => {
 
 }
 
+/////////////////errors//////////////////////
 
 	// $('.inputBox2').on('submit',(event) => {
 	// 	// event.preventDefault()
@@ -129,7 +132,7 @@ const getPokemonForm = () => {
 	// 	// $('.container2').append(nameUser)
 	// 	console.log(nameUser)
 	// })
-
+///////////////////////////////////////////
 	$('.inputBox1').on('submit' , (event) => {
 	
 	pokemonName = $('input[type="text"]').val()
@@ -148,16 +151,16 @@ const getPokemonForm = () => {
 
 		descriptionOfPokemon()
 	})
-	$('img').draggable()
-	
+	$('img').draggable({
+		helper:'clone'
+	})
+
 });
 
 
 ///objective:
 
-//expand the img to fit the container
-//get the refresh button to work
-//tooltips with another div with pokemon description
-//get carasuel and plus minus btton to work 
-// enter trainer name
+// add pokemon to trainer's side (drag and drop)
+// let trainer able to delete item
+// expand img 
 
