@@ -59,38 +59,5 @@ what did i do?
 
 //  });
 
-//  const getDoubleDmg = (pokemonTypes) =>{
-// 		pokemonTypes = pokemonTypes.map((types) => {
-// 			return types[0].damage_relations.double_damage_from;
-// 		});
-// 		 	pokemonTypes = flatten(pokemonTypes);
 
-// 		var damageType = pokemonTypes.map((type) => {
-// 			return $.ajax({
-// 				url: type.url,
-// 				dataType: 'json',
-// 				method:'GET'
-// 			})
-// 	})
-// 		$.when.apply(null,damageType).then(() => {
-// 			var pokemon = Array.prototype.slice.call(arguments);
-// 			buildTeam(pokemon);
-// 		})
-
-// 		console.log(damageType);//array
-// }
-
-// 	const buildTeam = (pokemon) => {
-// 		pokemon = pokemon.map(function(poke){
-// 				return poke[0].pokemon;
-// 		})
-// 		console.log(pokemon)
-// }
-
-// const flatten = (arrayToFlatten) => {
-// 	return arrayToFlatten.reduce((a,b) => {
-// 		return a.concat(b)
-// 	},[])
-// }
-// // console.log(trainerType)
 

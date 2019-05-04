@@ -116,7 +116,7 @@ const getPokemonForm = () => {
 	const nameUser = $('input[name="submit1"]').val()
 
 		// $('.container2').append(nameUser)
-		alert(nameUser)
+		alert('HI ' + nameUser + "!")
 		var  instruction = $('#inst').text('drag pokemon here for ' + nameUser + '\'s collection:')
 		$('.inputBox2').append(instruction)
 		event.preventDefault()
@@ -144,20 +144,9 @@ const getPokemonForm = () => {
 		// helper:'clone'
 	})
 	// $('inputBox2').droppable({
-	// 	drop: function(event,ui){
-	// 		var id = $(ui.draggable).attr('id');
-	// 		var toy = $(ui.draggable).attr('html');
-	// 		var box = $(this).attr('id');
-	// 	}
-	// 	$.ajax({
-	// 		url:'jquery.ui.touch-punch.min.js',
-	// 		type:'GET',
-	// 		data:{
-	// 			'id':id,
-	// 			'box':box
-	// 		}
+	// 	const $dropDiv = $('<div>')
+	// 	const draggable =$('ui.draggable')
 
-	// 	})
 	// })
 
 		///////refresh btn////////////////
@@ -172,6 +161,7 @@ const getPokemonForm = () => {
 		// $('.inputBox1').empty()
 		const $imaging = $('img')
 		$imaging.hide()
+		$('.tooltips').hide()
 	})
 
 
