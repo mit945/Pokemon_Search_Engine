@@ -20,7 +20,7 @@ const pokemonData = $.ajax({
 	})
 
 //////////description of pokemon///////
-const $div = $('<div>').addClass('tooltips').css('background-color','#bfff80')
+const $div = $('<div>').addClass('tooltips').css('background-color','#F8E4E1')
 
 const descriptionOfPokemon = () => {
 	
@@ -42,7 +42,7 @@ const descriptionOfPokemon = () => {
 		$('.tooltips').html(`
 			<h4>${form.name}</h4>
 			<h4>ability names: </h4>
-			<p>1.${pokemonData.abilities[0].ability.name}<p>
+			<p>1.${pokemonData.abilities[0].ability.name}</p>
 			<p>2.${pokemonData.abilities[1].ability.name}</p>
 			`)
 	}),(error) => {

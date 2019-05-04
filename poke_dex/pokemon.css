@@ -32,7 +32,8 @@ img{
 
 }
 p{
-	color:orange;
+	color: lightblue;
+	font-weight: bold;
 	font-family: sans-serif;
 	text-decoration: underline;
 }

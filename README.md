@@ -13,7 +13,7 @@ user stories:
 
 <!-- <img src= "prototype_pokemonWiki.png" alt = 'prototype_pokemonWiki picure'/> -->
 
-github pages: https://mit945.github.io/project-1/
+github pages:https://mit945.github.io/project-1/poke_dex/
 
 ```````````````````````````````
 *addtional requirements
