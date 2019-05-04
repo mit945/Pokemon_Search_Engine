@@ -116,7 +116,7 @@ const getPokemonForm = () => {
 	const nameUser = $('input[name="submit1"]').val()
 
 		// $('.container2').append(nameUser)
-		alert('HI ' + nameUser + "!")
+		alert('Welcome! Trainer ' + nameUser + "!")
 		var  instruction = $('#inst').text('drag pokemon here for ' + nameUser + '\'s collection:')
 		$('.inputBox2').append(instruction)
 		event.preventDefault()
@@ -143,11 +143,12 @@ const getPokemonForm = () => {
 	$('img').draggable({
 		// helper:'clone'
 	})
-	// $('inputBox2').droppable({
-	// 	const $dropDiv = $('<div>')
-	// 	const draggable =$('ui.draggable')
+	$('inputBox2').droppable({
+		drop: function(event,ui){
+			$('.inputBox2').append(ui.draggable)
+		}
 
-	// })
+	})
 
 		///////refresh btn////////////////
 

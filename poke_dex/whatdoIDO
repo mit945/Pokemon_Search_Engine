@@ -30,34 +30,3 @@ what did i do?
 
 
 
-// let pokemonTypes = "" ;//useless
-// 	/////////////pokemon types.////////////////////
-
-// var types = $('input[type=text]').val().replace(' ','');
-//  types = types.split(',');
-//  console.log(types)
-
-//  var trainerType = types.map(function(type){
- 	
-//  	return $.ajax({
-//  		url: 'http://pokeapi.co/api/v2/type/' + type,
-//  		dataType:'json',
-//  		method: 'GET'
-
-//  	})
-//  });
-
-
-//  	$.when.apply(null,trainerType).then(function(){
-//  		console.log(arguments)
-//  		var pokemonTypes = Array.prototype.slice.call(arguments)//into array's from input
-
-
-//  		getDoubleDmg(pokemonTypes)
-
-//  	})
-
-//  });
-
-
-
