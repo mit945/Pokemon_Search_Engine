@@ -21,7 +21,13 @@ github pages:https://mit945.github.io/project-1/poke_dex/
 
 ```````````````````````````````````````````
 *additional link/sources:https://pokemondb.net/pokedex/national
-
+````````````````````````````
+Blockers:
+ ##User is only able to have 1 favortite pokemon.
+ ##User can't delete pokemon from with in the page 
+ 	and need to refresh to get rid of the image of 
+ 	favorite pokemon.
+```````````````````````````
 
 
 
