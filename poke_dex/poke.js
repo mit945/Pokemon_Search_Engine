@@ -20,7 +20,7 @@ const pokemonData = $.ajax({
 	})
 
 //////////description of pokemon///////
-const $div = $('<div>').addClass('tooltips').css('background-color','#F8E4E1')
+const $div = $('<div>').addClass('tooltips')
 
 const descriptionOfPokemon = () => {
 	

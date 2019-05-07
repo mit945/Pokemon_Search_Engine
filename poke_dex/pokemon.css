@@ -11,10 +11,16 @@ h1{
 	color: green;
 }
 .inputBox1{
-	
+	border-color: orange;
+	border-style: double;
+	border-bottom-width: 6px;
+	border-bottom-color: #8000ff;
+	border-width: 4px 1.25em;
+	margin: 20px 20px;
 	background-color: #99ccff;
 	width: 400px;
 	height: 600px;
+
 	/*margin:auto;*/
 
 }
@@ -22,10 +28,22 @@ img{
 	width: 250px;
 	height: 250px;
 	object-position: center;
+	/*visibility: hidden;*/
+}
+#input1 , #input2{
+	color:#661a00;
+	background-color: #e6fff2;
+	border-style: none;
+	border-radius: 1em;
 }
 .inputBox2{
-	
-	background-color: purple;
+	border-color: red;
+	border-bottom-width: 6px;
+	border-style: double;
+	border-bottom-color: #8000ff;
+	border-width: 4px 1.25em;
+	margin: 20px 20px;
+	background-color: #ffcc33;
 	width: 400px;
 	height: 600px;
 	/*margin:auto;*/
@@ -44,11 +62,28 @@ h4{
 
 }
 .tooltips{
-	width: 300px;
+	border-width: 4px 1.25em;
+	border-radius: 0.2em;
+	border-bottom-color: black;
+	border-bottom-style: dashed;
+	background-color: white;
+	width: 310px;
 	height: 155px;
-	border-style: dotted;
+	
 }
 span{
 	color:blue;
 	background-color: lightgreen;
+}
+form{
+	color: violet;
+	border-radius: 0.5em;
+	border-style: none;
+	font-family: sans-serif;
+}
+.submitBtn{
+	color: lightpink;
+	background-color: azure;
+	border-radius: 1em;
+
 }
