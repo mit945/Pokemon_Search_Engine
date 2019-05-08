@@ -34,7 +34,7 @@ const descriptionOfPokemon = () => {
 	
 
 	}).then((pokemonData) => {
-		console.log(pokemonData.abilities[0].ability.name)
+		// console.log(pokemonData.abilities[0].ability.name)
 		var form = pokemonData.forms[0]
 		// console.log(pokemonData.abilities[1].name)
 		// $('.tooltips').append(pokemonData.abilities[0].ability.name)
@@ -108,7 +108,13 @@ const getPokemonForm = () => {
 	}
 
 }
+/////user's collection/////////
+const collection =[];//up to 8 collections
 
+
+let count = 0;
+/////////////////////////
+	
 /////////////////errors//////////////////////
 
 	$('.inputBox2').on('submit',(event) => {
@@ -132,10 +138,19 @@ const getPokemonForm = () => {
 
 	getPokemon()
 	getPokemonForm()
+	while(collection.length < 8){
+		count += 1
+		let appendImg = $('#appendImg').addClass('appeneded')
+		$('.inputBox2').append(appendImg)
+		collection.push(pokemonName)
+	}
+
+
 	event.preventDefault()
 	})
 
 
+console.log(collection)
 	$('img').on('mouseenter',(event) => {
 
 		descriptionOfPokemon()
@@ -143,12 +158,9 @@ const getPokemonForm = () => {
 	$('img').draggable({
 		// helper:'clone'
 	})
-	// $('inputBox2').droppable({
-	// 	drop: function(event,ui){
-	// 		$('.inputBox2').append(ui.draggable)
-	// 	}
-
-	// })
+	// $('inputBox2').droppable(
+	// 	{hoverClass:"drop-hover"}
+	// );
 
 		///////refresh btn////////////////
 
@@ -156,13 +168,16 @@ const getPokemonForm = () => {
 	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
 	$('.inputBox1').append($refresh)
 
+
+
 	$('.refreshBtn').on('click', () => {
 		console.log('hi')
 		// let pokemonImg = $image;
 		// $('.inputBox1').empty()
-		const $imaging = $('img')
-		$imaging.hide()
-		$('.tooltips').hide()
+		// const $imaging = $('img')
+		// $imaging.hide()
+		// $('.tooltips').hide()
+
 	})
 
 
@@ -173,8 +188,5 @@ refreshButton()
 
 
 ///objective:
-
-// add pokemon to trainer's side (drag and drop)
-// let trainer able to delete item
-// expand img 
+//make the inputBox2 droppable
 

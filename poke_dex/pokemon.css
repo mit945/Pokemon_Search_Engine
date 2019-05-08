@@ -81,6 +81,9 @@ form{
 	border-style: none;
 	font-family: sans-serif;
 }
+#container2 form.inputBox2:hover{
+	color: red;
+}
 .submitBtn{
 	color: lightpink;
 	background-color: azure;
