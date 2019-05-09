@@ -12,8 +12,8 @@ h1{
 }
 .inputBox1{
 	border-color: orange;
-	border-style: double;
-	border-bottom-width: 6px;
+	border-bottom-style: dashed;
+	border-bottom-width: 30px;
 	border-bottom-color: #8000ff;
 	border-width: 4px 1.25em;
 	margin: 20px 20px;
@@ -38,8 +38,8 @@ img{
 }
 .inputBox2{
 	border-color: red;
-	border-bottom-width: 6px;
-	border-style: double;
+	border-bottom-width: 30px;
+	border-bottom-style: dashed;
 	border-bottom-color: #8000ff;
 	border-width: 4px 1.25em;
 	margin: 20px 20px;
@@ -50,7 +50,9 @@ img{
 
 }
 p{
-	color: lightblue;
+	color: black;
+	font-weight: bold;
+	font-family: "New Courier";
 	font-weight: bold;
 	font-family: sans-serif;
 	text-decoration: underline;
