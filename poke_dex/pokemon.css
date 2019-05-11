@@ -83,8 +83,21 @@ form{
 	border-style: none;
 	font-family: sans-serif;
 }
+#inst{
+	color: darkblue;
+	font-weight: bold;
+	font-family: "New Courier";
+	font-weight: bold;
+	font-family: sans-serif;
+	text-decoration: none;
+}
 #container2 form.inputBox2:hover{
 	color: red;
+}
+.refreshBtn{
+	width: 100px;
+	height:40px;
+	border-width: 20%;
 }
 .submitBtn{
 	color: lightpink;

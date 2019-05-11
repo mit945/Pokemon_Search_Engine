@@ -73,6 +73,7 @@ const getPokemon = () => {
 		// console.log(form)
 		// console.log(form.name)
 		// $('.tooltips').append(form.name)
+		console.log(typeof $('.refreshBtn'))
 	
 	}),(error) => {
 		console.log(error)
@@ -91,7 +92,7 @@ const getPokemonForm = () => {
 		method: 'GET'
 	 
 	}).then((pokemondata) => {
-		console.log(pokemondata)
+		// console.log(pokemondata)
 	var pokemonFormURL = pokemondata.forms[0].url
 		// console.log(pokemonFormURL)
 		// console.log()
@@ -100,7 +101,7 @@ const getPokemonForm = () => {
 		$('#inputBox1').append($image)
 		///////append $image///////
 
-
+		//if refresh button is hit, then call $image again
 
 	}),(error) => {
 
@@ -110,9 +111,15 @@ const getPokemonForm = () => {
 }
 /////user's collection/////////
 const collection =[];//up to 8 collections
-
-
 let count = 0;
+
+const collectionImg = () => {
+	for(let i = 0 ; i < 8 ;i++){
+		$('.inputBox2').append($image)
+		// if($('.ui.draggable'))
+	}
+}
+
 /////////////////////////
 	
 /////////////////errors//////////////////////
@@ -128,29 +135,8 @@ let count = 0;
 		event.preventDefault()
 	})
 ///////////////////////////////////////////
-	$('.inputBox1').on('submit' , (event) => {
-	
-	pokemonName = $('input[type="poke"]').val()
-	// console.log(pokemonName)
-
-/////////////////////////////////////////
-//////////////get pokemon calls below here//////////////////////
-
-	getPokemon()
-	getPokemonForm()
-	while(collection.length < 8){
-		count += 1
-		let appendImg = $('#appendImg').addClass('appeneded')
-		$('.inputBox2').append(appendImg)
-		collection.push(pokemonName)
-	}
 
 
-	event.preventDefault()
-	})
-
-
-console.log(collection)
 	$('img').on('mouseenter',(event) => {
 
 		descriptionOfPokemon()
@@ -164,7 +150,7 @@ console.log(collection)
 
 		///////refresh btn////////////////
 
-	const refreshButton = () => {
+	
 	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
 	$('.inputBox1').append($refresh)
 
@@ -174,15 +160,27 @@ console.log(collection)
 		console.log('hi')
 		// let pokemonImg = $image;
 		// $('.inputBox1').empty()
-		// const $imaging = $('img')
-		// $imaging.hide()
-		// $('.tooltips').hide()
+		const $imaging = $('img')
+		$imaging.hide()
+		$('.tooltips').hide()
+		// $('#input1').empty()
 
 	})
 
+	$('.inputBox1').on('submit' , (event) => {
+	
+	pokemonName = $('input[type="poke"]').val()
+	// console.log(pokemonName)
 
-}
-refreshButton()
+/////////////////////////////////////////
+//////////////get pokemon calls below here//////////////////////
+
+	getPokemon()
+	getPokemonForm()
+
+
+	event.preventDefault()
+	})
 
 });
 
