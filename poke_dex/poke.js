@@ -132,6 +132,10 @@ const collectionImg = () => {
 		alert('Welcome! Trainer ' + nameUser + "!")
 		var  instruction = $('#inst').text('drag pokemon here for ' + nameUser + '\'s collection:')
 		$('.inputBox2').append(instruction)
+
+		// $('inputBox2').droppable(
+	// 	{hoverClass:"drop-hover"}
+	// )
 		event.preventDefault()
 	})
 ///////////////////////////////////////////
@@ -144,9 +148,7 @@ const collectionImg = () => {
 	$('img').draggable({
 		// helper:'clone'
 	})
-	// $('inputBox2').droppable(
-	// 	{hoverClass:"drop-hover"}
-	// );
+	;
 
 		///////refresh btn////////////////
 
