@@ -8,9 +8,10 @@ const endPoint1 = `pokemon`;//get the pokemon by /pokemon/ in api
 let pokemonName = "";
 
 
-const nameURL = baseURL + endPoint1 + '/' + pokemonName 
+const nameURL = baseURL + endPoint1 + '/' + pokemonName ;
 
-const pokemonFormURL = `https://pokeapi.co/api/v2/pokemon-form/` + pokemonName + '/'
+const pokemonFormURL = `https://pokeapi.co/api/v2/pokemon-form/` + pokemonName + '/';
+
 $(() => {
 
 //////////////////get pokemon names/////////////
@@ -69,10 +70,7 @@ const getPokemon = () => {
 	
 
 	}).then((pokemonData) => {
-		// var form = pokemonData.forms[0]//img src of the pokemon
-		// console.log(form)
-		// console.log(form.name)
-		// $('.tooltips').append(form.name)
+		
 		console.log(typeof $('.refreshBtn'))
 	
 	}),(error) => {
@@ -122,7 +120,6 @@ const collectionImg = () => {
 
 /////////////////////////
 	
-/////////////////errors//////////////////////
 
 	$('.inputBox2').on('submit',(event) => {
 		
