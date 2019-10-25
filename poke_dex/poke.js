@@ -111,12 +111,12 @@ const getPokemonForm = () => {
 const collection =[];//up to 8 collections
 let count = 0;
 
-const collectionImg = () => {
-	for(let i = 0 ; i < 8 ;i++){
-		$('.inputBox2').append($image)
-		// if($('.ui.draggable'))
-	}
-}
+// const collectionImg = () => {
+// 	for(let i = 0 ; i < 8 ;i++){
+// 		$('.inputBox2').append($image)
+// 		// if($('.ui.draggable'))
+// 	}
+// }
 
 /////////////////////////
 	
@@ -157,14 +157,12 @@ const collectionImg = () => {
 
 	$('.refreshBtn').on('click', () => {
 		console.log('hi')
-		// let pokemonImg = $image;
-		// $('.inputBox1').empty()
-		const $imaging = $('img')
-		$imaging.hide()
-		$('.tooltips').hide()
-		// $('#input1').empty()
+		//empty 
 
 	})
+
+
+
 
 	$('.inputBox1').on('submit' , (event) => {
 	
