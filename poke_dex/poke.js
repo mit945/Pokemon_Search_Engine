@@ -14,13 +14,20 @@ const pokemonFormURL = `https://pokeapi.co/api/v2/pokemon-form/` + pokemonName +
 
 $(() => {
 
-//////////////////get pokemon names/////////////
+//////////////////
+  //get pokemon names
+//////////////////
 const pokemonData = $.ajax({
 		url: nameURL + pokemonName, 
 		
 	})
 
-//////////description of pokemon///////
+
+
+
+////////////////
+  //DISPLAYING THE ABILITY INFORMATIONS
+////////////////
 const $div = $('<div>').addClass('tooltips')
 
 const descriptionOfPokemon = () => {
@@ -36,7 +43,8 @@ const descriptionOfPokemon = () => {
 
 	}).then((pokemonData) => {
 		// console.log(pokemonData.abilities[0].ability.name)
-		var form = pokemonData.forms[0]
+		console.log(pokemonData)
+		var form = pokemonData.forms[0]//do not need this line
 		// console.log(pokemonData.abilities[1].name)
 		// $('.tooltips').append(pokemonData.abilities[0].ability.name)
 		// $('.tooltips').append(pokemonData.abilities[1].ability.name)
@@ -58,9 +66,11 @@ const descriptionOfPokemon = () => {
 
 }
 
-/////////////////////////////////
-///////////////get pokemon form api and log to console////////////////////
 
+
+///////////////
+//GET POKEMON API AND LOG IT TO THE CONSOLE
+/////////////////////////////////
 const getPokemon = () => {
 	
 	$.ajax({
@@ -71,7 +81,7 @@ const getPokemon = () => {
 
 	}).then((pokemonData) => {
 		
-		console.log(typeof $('.refreshBtn'))
+		console.log(pokemonData)
 	
 	}),(error) => {
 		console.log(error)
@@ -82,7 +92,13 @@ const getPokemon = () => {
 	
 }
 
-//////////get the picture of pokemon///////////////////////
+
+
+
+
+//////////
+ //GET THE PICTURE OF THE POKEMON AND DISPLAY IT IN CONTAINER1
+///////////////////////
 const getPokemonForm = () => {
 	$.ajax({
 		url : nameURL + pokemonName,
@@ -91,7 +107,7 @@ const getPokemonForm = () => {
 	 
 	}).then((pokemondata) => {
 		// console.log(pokemondata)
-	var pokemonFormURL = pokemondata.forms[0].url
+	var pokemonFormURL = pokemondata.forms[0].url//look at 
 		// console.log(pokemonFormURL)
 		// console.log()
 
@@ -107,6 +123,8 @@ const getPokemonForm = () => {
 	}
 
 }
+
+
 /////user's collection/////////
 const collection =[];//up to 8 collections
 let count = 0;
@@ -118,9 +136,12 @@ let count = 0;
 // 	}
 // }
 
-/////////////////////////
-	
 
+
+
+/////////////////////////
+ //  CONTAINER 2	
+//////////////////////////
 	$('.inputBox2').on('submit',(event) => {
 		
 	const nameUser = $('input[name="submit1"]').val()
@@ -135,9 +156,13 @@ let count = 0;
 	// )
 		event.preventDefault()
 	})
-///////////////////////////////////////////
 
 
+
+
+/////////////////
+ //TOOLTIP WHEN MOUSEENTER and call descriptionOfPokemon() function
+//////////////////
 	$('img').on('mouseenter',(event) => {
 
 		descriptionOfPokemon()
@@ -147,24 +172,35 @@ let count = 0;
 	})
 	;
 
-		///////refresh btn////////////////
 
-	
-	const $refresh = $('<button>').addClass('refreshBtn').text('REFRESH').css('background-color','azure')
+
+
+
+//////////////
+  //REREFRESH BUTTON
+     // - CLEAR IMAGE
+     // - CLEAR DESCRIPTIONS
+//////////////
+	const $refresh = $('<button>').addClass('refreshBtn').text('Reset').css('background-color','white')
 	$('.inputBox1').append($refresh)
 
 
 
 	$('.refreshBtn').on('click', () => {
-		console.log('hi')
-		//empty 
+		console.log('refreshed')
+		//empty the tooltip and image
 
 	})
 
 
 
 
-	$('.inputBox1').on('submit' , (event) => {
+
+
+//////////////
+ //
+
+$('.inputBox1').on('submit' , (event) => {
 	
 	pokemonName = $('input[type="poke"]').val()
 	// console.log(pokemonName)
