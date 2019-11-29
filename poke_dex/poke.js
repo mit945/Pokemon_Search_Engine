@@ -189,7 +189,8 @@ let count = 0;
 	$('.refreshBtn').on('click', () => {
 		console.log('refreshed')
 		//empty the tooltip and image
-
+		$('.tooltips').empty()
+		$('img').removeAttr('src');
 	})
 
 
