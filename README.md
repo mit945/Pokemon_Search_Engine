@@ -1,28 +1,11 @@
-# project-1
-MY_Pokemon wiki
+# Pokemon Seach Engine 
 
+## Application Functions
+    
+    - Type pokemon name in search box on the left to get character informations.
+    - Type in user name on the right to identify player/trainer
+    - Drag image across page with Jquery UI
 
-user stories:
-```````````````
-##User is able to type in the search box for the pokemon<br/>
-##user is able to have their own collection of favorite pokemon(thru drag/click)<br/>
-##user is able remove their fav pokemon from collections<br/>
-##User is able to inspect the img of the pokemon for abilities with *tooltip<br/>
-##user is able to enter their trainer name.<br/>
-````````````````````````````````````
-
-<!-- <img src= "prototype_pokemonWiki.png" alt = 'prototype_pokemonWiki picure'/> -->
-
-github pages:https://mit945.github.io/project-1/poke_dex/
-github pages:https://mit945.github.io/project-1/
-```````````````````````````````
-*addtional requirements
-	-user able to have a smooth experience on the mobile phone
-
-```````````````````````````````````````````
-*additional link/sources:https://pokemondb.net/pokedex/national
-
-
-
+Link: https://mit945.github.io/Pokemon_Seach_Engine/poke_dex/ 
 
 
