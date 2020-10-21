@@ -2,10 +2,10 @@
 
 ## Application Features
     
-    * Type pokemon name in search box on the left color in **blue** to get character informations.
-    * Type in user name on the right color in **yellow** to input player/trainer name
-    * Drag image across page with Jquery UI
-    * Have Fun!
+  * Type pokemon name in search box on the left color in **blue** to get character informations.
+  * Type in user name on the right color in **yellow** to input player/trainer name
+  * Drag image across page with Jquery UI
+  * Have Fun!
 
 ## Tasks
 
