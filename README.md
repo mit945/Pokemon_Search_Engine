@@ -13,7 +13,8 @@
   - [x] Pull from PokeAPI 
   - [x] Destructure data strucutures from JSON template 
   - [x] Create CSS template
-
+  - [x] Embed Jquery and UI tools
+  - [ ] Create reset button 
 
 Link: https://mit945.github.io/Pokemon_Seach_Engine/poke_dex/ 
 
