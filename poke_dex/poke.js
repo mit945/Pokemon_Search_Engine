@@ -111,7 +111,7 @@ const getPokemonForm = () => {
 		// console.log(pokemonFormURL)
 		// console.log()
 
-	var $image = $('img').attr(`src` , `${pokemondata.sprites.front_default}`)
+	var $image = $('img').attr(`src` , `${pokemondata.sprites.front_default}/Transparent.gif`)
 		$('#inputBox1').append($image)
 		///////append $image///////
 
