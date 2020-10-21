@@ -21,7 +21,7 @@ https://mit945.github.io/Pokemon_Seach_Engine/poke_dex/
   - [x] Create CSS template
   - [x] Embed Jquery and UI tools
   - [x] Deploy on Github Pages
-  - [x] Create Drag boxes for Pokemon Objects 
+  - [ ] Create Drag boxes for Pokemon Objects 
 
 ## Fetch API data 
   
