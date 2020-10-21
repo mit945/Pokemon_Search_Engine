@@ -10,7 +10,8 @@ https://mit945.github.io/Pokemon_Seach_Engine/poke_dex/
   * Type in user name on the right color in **yellow** to input player/trainer name
   * Drag image across page with Jquery UI
   * Have Fun!
-![](game.jpg =300x400)
+
+<img src="image/game.png" width="400" >
 
 ## Tasks
 
