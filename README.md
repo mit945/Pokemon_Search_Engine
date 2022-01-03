@@ -2,7 +2,7 @@
 
 ## Link: 
 
-https://mit945.github.io/Pokemon_Seach_Engine/poke_dex/ 
+https://mit945.github.io/Pokemon_Search_Engine/poke_dex/ 
 
 ## Application Features
     
